@@ -1,0 +1,24 @@
+<table>
+    <tr>
+        <th style="border: 2px ridge black;">City Code</th>
+        <th style="border: 2px ridge black;">Country Code</th>
+        <th style="border: 2px ridge black;">City Name</th>
+        <th style="border: 2px ridge black;">Population</th>
+        <th style="border: 2px ridge black;">Is Coastal</th>
+        <th style="border: 2px ridge black;">Area KM</th>
+        <th style="border: 2px ridge black;">All Details </th>
+    </tr>
+    <% cities.forEach((city) => { %>
+    <tr>
+        <td style="border: 2px ridge black;"><%= city.cty_code %></td>
+        <td style="border: 2px ridge black;"><%= city.co_code %></td>
+        <td style="border: 2px ridge black;"><%= city.cty_name %></td>
+        <td style="border: 2px ridge black;">><%= city.population %></td>
+        <td style="border: 2px ridge black;"><%= city.isCoastal %></td>
+        <td style="border: 2px ridge black;"><%= city.areaKM %></td>
+        <td style="border: 2px ridge black;"><a href="/allCityDetails/<%= city.cty_code %>">All Details</a></td>  
+        </tr>
+         <% }) %>
+</table>
+
+<a class="btn btn-primary" href="/" role="button">Home</a>
